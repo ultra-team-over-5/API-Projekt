@@ -16,12 +16,13 @@ export function renderCard(hit) {
   const recipeImage = document.createElement("img");
   const recipeDescription = document.createElement("div");
   const recipeName = document.createElement("h3");
-
+  const healthBox = document.createElement("div");
   const recipeUrl = document.createElement("button");
   const recipeLink = document.createElement("a");
   const recipeCalories = document.createElement("h4");
-  const healthTags = document.createElement("div");
+
   recipeUrl.className = "recipeUrl";
+
   recipeCard.className = "recipeCard";
   recipeDescription.className = "recipeDescription";
   recipeImage.className = "recipeImage";
@@ -39,7 +40,23 @@ export function renderCard(hit) {
   recipeName.innerHTML = hit.recipe.label.toLowerCase();
   recipeImage.setAttribute("src", hit.recipe.image);
   resultsElement.appendChild(recipeCard);
+  recipeDescription.appendChild(healthBox);
+  hit.recipe.healthLabels.slice(0, 2).forEach(healthTag => {
+    const healthButton = document.createElement("button");
+    healthButton.innerHTML = healthTag;
+    healthBox.appendChild(healthButton);
+    healthButton.className = "healthButton";
+    healthBox.className = "healthTag";
+  });
 }
+// export function createHealthTags(healthTags) {
+//   healthTags.forEach(healthTag => {
+//     const healthBox = document.createElement("div");
+//     const healthButton = document.createElement("button");
+//     healthButton.innerHTML = healthTag;
+//     healthBox.appendChild(healthButton);
+//     healthBox.className = "healthTag";
+//   });
 
 export function renderResults(recipeList) {
   removeChilds(resultsElement);

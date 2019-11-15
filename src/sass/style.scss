@@ -5,6 +5,18 @@ body {
   font-family: "Verdana";
 }
 
+// .hide {
+//   display: none;
+// }
+.startScreen {
+  h3 {
+    color: white;
+    background-color: purple;
+  }
+  .pusheen {
+    border-radius: 70%;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -81,12 +93,15 @@ body {
 }
 
 .submitButton {
-  width: 80%;
-  max-width: 500px;
+  width: auto;
   font-weight: bold;
   font-size: 13px;
   border-radius: 15px;
   box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
+  &:hover {
+    background: purple;
+    color: white;
+  }
 }
 
 .results {
@@ -115,10 +130,10 @@ body {
   .recipeDescription {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     margin-left: 7px;
     h3 {
       color: white;
+      margin-top: 3px;
     }
     h4 {
       color: lightgray;
@@ -133,6 +148,17 @@ body {
       background-color: white;
       width: 70px;
       border-radius: 15px;
+    }
+    .healthTag {
+      display: flex;
+      .healthButton {
+        background: #9fcc2e;
+        color: white;
+        border: none;
+        margin: 5px;
+        font-size: 8px;
+        border-radius: 5px;
+      }
     }
   }
 }
