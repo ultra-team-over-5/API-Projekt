@@ -20,5 +20,6 @@ async function getRecipes(input) {
 
 searchSubmit.addEventListener("click", async () => {
   const apiResponse = await getRecipes(searchInput);
-  renderResults(apiResponse.hits);
+  //console.log(apiResponse.hits[0].recipe.label);
+  renderResults(apiResponse);
 });

@@ -11,18 +11,20 @@ export function removeChilds(parent) {
   parent.innerHTML = "";
 }
 
-export function renderCard(recipe) {
+export function renderCard(hit) {
   const recipeCard = document.createElement("div");
   const recipeName = document.createElement("h3");
   const recipeImage = document.createElement("img");
   recipeCard.appendChild(recipeName);
   recipeCard.appendChild(recipeImage);
-  recipeName.innerHTML(recipe.label);
-  recipeImage.setAttribute("src", recipe.image);
+  recipeName.innerHTML = hit.recipe.label;
+  recipeImage.setAttribute("src", hit.recipe.image);
   resultsElement.appendChild(recipeCard);
 }
 
 export function renderResults(recipeList) {
   removeChilds(resultsElement);
-  recipeList.forEach(renderCard(recipeList));
+  recipeList.hits.forEach(recipe => {
+    renderCard(recipe);
+  });
 }
