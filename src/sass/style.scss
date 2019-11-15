@@ -5,16 +5,22 @@ body {
   font-family: "Verdana";
 }
 
-// .hide {
-//   display: none;
-// }
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.pusheen {
+  border-radius: 70%;
+  margin: 40px;
+}
 .startScreen {
   h3 {
     color: white;
     background-color: purple;
-  }
-  .pusheen {
-    border-radius: 70%;
   }
 }
 .header {
