@@ -2,9 +2,12 @@ import "babel-polyfill";
 import { removeChilds, noRecipesFound, renderResults } from "./api/elements";
 //import  from "./api/edamam";
 
+const resultsElement = document.querySelector(".results");
 const searchInput = document.querySelector(".searchQuery");
 const searchSubmit = document.querySelector(".submitButton");
 const startScreen = document.querySelector(".startScreen");
+const cat = document.querySelector(".pusheen");
+const main = document.querySelector(".main");
 const proxy = "https://cors-anywhere.herokuapp.com/";
 
 async function getRecipes(input) {
@@ -18,14 +21,17 @@ async function getRecipes(input) {
 
   return data;
 }
-
-searchSubmit.addEventListener("click", () => {
-  startScreen.classList.remove(".hide");
-});
+// searchSubmit.addEventListener("click", () => {
+//   cat.classList.remove("hide");
+//   cat.classList.add("show");
+// });
 
 searchSubmit.addEventListener("click", async () => {
-  startScreen.classList.add(".hide");
+  main.appendChild(cat);
+  removeChilds(resultsElement);
+  cat.classList.add("show");
   const apiResponse = await getRecipes(searchInput);
-  //console.log(apiResponse.hits[0].recipe.label);
+  cat.classList.remove("show");
+  removeChilds(startScreen);
   renderResults(apiResponse);
 });
