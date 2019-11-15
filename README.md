@@ -1,3 +1,3 @@
 # API-Projekt
 
-![GIF](resources/recipegod.gif =250px)
+![GIF](resources/recipegod.gif =250x)
