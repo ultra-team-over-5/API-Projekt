@@ -4,6 +4,7 @@ import { removeChilds, noRecipesFound, renderResults } from "./api/elements";
 
 const searchInput = document.querySelector(".searchQuery");
 const searchSubmit = document.querySelector(".submitButton");
+const startScreen = document.querySelector(".startScreen");
 const proxy = "https://cors-anywhere.herokuapp.com/";
 
 async function getRecipes(input) {
@@ -18,7 +19,12 @@ async function getRecipes(input) {
   return data;
 }
 
+searchSubmit.addEventListener("click", () => {
+  startScreen.classList.remove(".hide");
+});
+
 searchSubmit.addEventListener("click", async () => {
+  startScreen.classList.add(".hide");
   const apiResponse = await getRecipes(searchInput);
   //console.log(apiResponse.hits[0].recipe.label);
   renderResults(apiResponse);
