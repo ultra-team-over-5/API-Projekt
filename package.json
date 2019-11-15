@@ -1,0 +1,29 @@
+{
+  "name": "api-projekt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel run src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ultra-team-over-5/API-Projekt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ultra-team-over-5/API-Projekt/issues"
+  },
+  "homepage": "https://github.com/ultra-team-over-5/API-Projekt#readme"
+}
