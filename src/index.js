@@ -7,6 +7,8 @@ const searchInput = document.querySelector(".searchQuery");
 const searchSubmit = document.querySelector(".submitButton");
 const startScreen = document.querySelector(".startScreen");
 const cat = document.querySelector(".pusheen");
+const cook = document.querySelector(".cook");
+
 const main = document.querySelector(".main");
 const proxy = "https://cors-anywhere.herokuapp.com/";
 
