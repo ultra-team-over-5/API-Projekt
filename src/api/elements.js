@@ -34,7 +34,7 @@ export function renderCard(hit) {
   recipeDescription.appendChild(recipeCalories);
   recipeLink.appendChild(recipeUrl);
   recipeCalories.innerHTML = hit.recipe.calories.toFixed(0) + " kcal";
-  recipeUrl.innerHTML = "Cook this!";
+  recipeUrl.innerHTML = "how to cook this";
   recipeLink.setAttribute("href", hit.recipe.url);
   recipeLink.setAttribute("target", "_blank");
   recipeName.innerHTML = hit.recipe.label.toLowerCase();
