@@ -1,5 +1,5 @@
 body {
-  background: #9fcc2e;
+  background: #12b0fc;
   margin: 0;
   padding: 0;
   font-family: "Verdana";
@@ -14,51 +14,29 @@ body {
 }
 
 .pusheen {
+  width: 70%;
+  max-width: 400px;
   border-radius: 70%;
   margin: 40px;
-}
-.startScreen {
-  h3 {
-    color: white;
-    background-color: purple;
-  }
-}
-.header {
-  display: flex;
-  justify-content: center;
-  font-size: 0.7em;
-  animation-name: color-flex;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
   -webkit-box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
 }
-
-@keyframes color-flex {
-  0% {
-    color: red;
+.startScreen {
+  align-items: center;
+  h3 {
+    font-size: 0.8em;
+    color: white;
+    background-color: #fc9311;
   }
-  15% {
-    color: blue;
-  }
-  30% {
-    color: yellow;
-  }
-  45% {
-    color: purple;
-  }
-  60% {
-    color: black;
-  }
-  75% {
-    color: cyan;
-  }
-  90% {
-    color: green;
-  }
-  100% {
-    color: red;
+}
+.header {
+  text-align: center;
+  -webkit-box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
+  img {
+    height: 70%;
   }
 }
 
@@ -68,45 +46,52 @@ body {
   justify-content: center;
   align-items: center;
 }
-.searchQuery {
-  margin: 20px;
-  min-width: 80%;
-  max-width: 1000px;
-  height: 25px;
-  text-align: center;
-  border-radius: 15px;
-  animation-name: size-flex;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-}
 
-@keyframes size-flex {
-  10% {
-    width: 100px;
-  }
-  30% {
-    width: 400px;
-  }
-  50% {
-    width: 500px;
-  }
-  70% {
-    width: 400px;
-  }
-  90% {
-    width: 200px;
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 700px;
+}
+.searchQuery {
+  margin: 20px 0px 20px 20px;
+  height: 25px;
+  width: 80%;
+  text-align: center;
+  border-left: 2px solid #fc9311;
+  border-top: 2px solid #fc9311;
+  border-bottom: 2px solid #fc9311;
+  border-right: transparent;
+  border-radius: 5px 0px 0px 5px;
+  font-family: "Verdana";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(243, 243, 243, 0);
+  &:valid {
+    color: rgb(49, 48, 48);
   }
 }
 
 .submitButton {
-  width: auto;
-  font-weight: bold;
-  font-size: 13px;
-  border-radius: 15px;
+  width: 20%;
+  height: 31px;
+  border-right: 2px solid #fc9311;
+  border-top: 2px solid #fc9311;
+  border-bottom: 2px solid #fc9311;
+  border-radius: 0px 5px 5px 0px;
+  border-left: transparent;
+  background: rgb(243, 243, 243);
   box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
+  i {
+    color: #fc9311;
+  }
   &:hover {
-    background: purple;
+    background: #fc9311;
     color: white;
+    i {
+      color: white;
+    }
   }
 }
 
@@ -118,19 +103,22 @@ body {
 }
 
 .recipeCard {
-  margin: 20px;
+  margin: 13px;
   width: 80%;
-  max-width: 500px;
-  height: auto;
-  background: #0e402d;
+  max-width: 700px;
+  height: 25%;
+  background: transparent;
   display: flex;
   border-radius: 15px;
-
-  box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
+  background: transparent;
 
   .recipeImage {
-    border-radius: 15px 0px 0px 15px;
-    height: 10em;
+    box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
+    // border-radius: 15px 0px 0px 15px;
+    border-radius: 50%;
+    height: 100%;
+    width: 33%;
+    float: left;
   }
 
   .recipeDescription {
@@ -139,30 +127,42 @@ body {
     margin-left: 7px;
     h3 {
       color: white;
-      margin-top: 3px;
+      margin: 3px 0px 3px 0px;
+      font-size: 1em;
     }
     h4 {
+      font-size: 1em;
       color: lightgray;
       font-style: italic;
       font-size: 0.75em;
+      margin: 3px 0px 3px 0px;
     }
     .recipeLink {
       box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.75);
     }
     .recipeUrl {
       color: #black;
-      background-color: white;
-      width: 70px;
-      border-radius: 15px;
+      background-color: rgb(255, 255, 255);
+      width: auto;
+      border-radius: 5px;
+      border: 1px solid #fc9311;
+      margin: 3px 0px 3px 0px;
+      &:hover {
+        background: #fc9311;
+        color: white;
+      }
     }
     .healthTag {
+      margin: 3px 0px 3px 0px;
       display: flex;
+      flex-wrap: wrap;
       .healthButton {
-        background: #9fcc2e;
+        background: #fc9311;
         color: white;
         border: none;
         margin: 5px;
-        font-size: 8px;
+        font-size: 0.7em;
+        font-weight: bold;
         border-radius: 5px;
       }
     }
