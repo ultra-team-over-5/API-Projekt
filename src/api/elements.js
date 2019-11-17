@@ -49,18 +49,17 @@ export function renderCard(hit) {
     healthBox.className = "healthTag";
   });
 }
-// export function createHealthTags(healthTags) {
-//   healthTags.forEach(healthTag => {
-//     const healthBox = document.createElement("div");
-//     const healthButton = document.createElement("button");
-//     healthButton.innerHTML = healthTag;
-//     healthBox.appendChild(healthButton);
-//     healthBox.className = "healthTag";
-//   });
 
 export function renderResults(recipeList) {
   removeChilds(resultsElement);
   recipeList.hits.forEach(recipe => {
     renderCard(recipe);
+  });
+}
+
+export function renderNoResults(recipeList) {
+  removeChilds(resultsElement);
+  recipeList.hits(result => {
+    renderNoResults();
   });
 }
