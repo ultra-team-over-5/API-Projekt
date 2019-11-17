@@ -2,8 +2,9 @@ const resultsElement = document.querySelector(".results");
 
 export function noRecipesFound() {
   removeChilds(resultsElement);
-  const noResults = document.createElement("h2");
-  noResults.innerHTML = "No matches. Sad :(";
+  const noResults = document.createElement("div");
+  noResults.className = "NoResults";
+  noResults.innerHTML = "Found no Recipe. Please try something else!";
   resultsElement.appendChild(noResults);
 }
 
@@ -62,9 +63,9 @@ export function renderResults(recipeList) {
   backToTop.innerHTML = `<i class="fas fa-arrow-circle-up"></i>`;
 }
 
-export function renderNoResults(recipeList) {
-  removeChilds(resultsElement);
-  recipeList.hits(result => {
-    renderNoResults();
-  });
-}
+// export function renderNoResults(recipeList) {
+//   removeChilds(resultsElement);
+//   recipeList.hits(result => {
+//     renderNoResults();
+//   });
+// }
