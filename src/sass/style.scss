@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
+  height: 100vh;
 }
 
 .hide {
@@ -156,8 +157,8 @@ body {
     .recipeLink {
     }
     .recipeUrl {
-      color: #black;
-      background-color: rgb(255, 255, 255);
+      color: rgba(0, 0, 0, 0.836);
+      background-color: rgba(255, 255, 255, 0.87);
       width: auto;
       border-radius: 5px;
       border: 1px solid #fc9311;
@@ -181,5 +182,35 @@ body {
         font-family: "Source Sans Pro", sans-serif;
       }
     }
+  }
+}
+
+.backToTop {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.733);
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid #fc9311;
+  margin: 20px;
+  align-self: right;
+  &:active {
+    background: #fc9311;
+    color: white;
+  }
+  .backToTopButton {
+  }
+}
+
+button {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  position: relative;
+  .edamam {
+    opacity: 0.7;
   }
 }
