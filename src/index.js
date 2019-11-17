@@ -35,5 +35,7 @@ searchSubmit.addEventListener("click", async () => {
   const apiResponse = await getRecipes(searchInput);
   cat.classList.remove("show");
   removeChilds(startScreen);
-  renderResults(apiResponse);
+  if (apiResponse.hits.length == 0) {
+    noRecipesFound();
+  } else renderResults(apiResponse);
 });
