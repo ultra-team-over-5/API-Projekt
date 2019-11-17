@@ -56,12 +56,10 @@ export function renderResults(recipeList) {
     renderCard(recipe);
   });
   const backToTop = document.createElement("a");
-  const backToTopButton = document.createElement("button");
   resultsElement.appendChild(backToTop);
-  backToTop.appendChild(backToTopButton);
   backToTop.className = "backToTop";
   backToTop.setAttribute("href", "#");
-  backToTopButton.innerHTML = "back to top";
+  backToTop.innerHTML = `<i class="fas fa-arrow-circle-up"></i>`;
 }
 
 export function renderNoResults(recipeList) {
