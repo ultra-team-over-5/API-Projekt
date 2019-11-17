@@ -55,6 +55,13 @@ export function renderResults(recipeList) {
   recipeList.hits.forEach(recipe => {
     renderCard(recipe);
   });
+  const backToTop = document.createElement("a");
+  const backToTopButton = document.createElement("button");
+  resultsElement.appendChild(backToTop);
+  backToTop.appendChild(backToTopButton);
+  backToTop.className = "backToTop";
+  backToTop.setAttribute("href", "#");
+  backToTopButton.innerHTML = "back to top";
 }
 
 export function renderNoResults(recipeList) {
