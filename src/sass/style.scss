@@ -58,6 +58,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 80%;
 }
 
 .search {
@@ -186,18 +187,9 @@ body {
 }
 
 .backToTop {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.733);
-  width: 50%;
-  border-radius: 5px;
-  border: 1px solid #fc9311;
-  margin: 20px;
-  align-self: right;
-  &:active {
-    background: #fc9311;
-    color: white;
-  }
-  .backToTopButton {
+  zoom: 2.4;
+  i {
+    color: #fc9211c4;
   }
 }
 
@@ -208,9 +200,9 @@ button {
 .footer {
   display: flex;
   justify-content: center;
-  height: 10vh;
-  position: relative;
+  width: auto;
   .edamam {
     opacity: 0.7;
+    filter: grayscale(100%);
   }
 }
