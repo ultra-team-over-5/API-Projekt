@@ -1,6 +1,5 @@
 import "babel-polyfill";
 import { removeChilds, noRecipesFound, renderResults } from "./api/elements";
-//import  from "./api/edamam";
 
 const resultsElement = document.querySelector(".results");
 const searchInput = document.querySelector(".searchQuery");
@@ -23,10 +22,6 @@ async function getRecipes(input) {
 
   return data;
 }
-// searchSubmit.addEventListener("click", () => {
-//   cat.classList.remove("hide");
-//   cat.classList.add("show");
-// });
 
 searchSubmit.addEventListener("click", async () => {
   main.appendChild(cat);
